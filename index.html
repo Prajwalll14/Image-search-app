@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Image Search App</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">Image Search App</h1>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+
+    <!-- Search -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for Images">
+      <button class="search-btn" onclick="searchImages()">Search</button>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- Images -->
+    <div id="imageContainer" class="image-grid"></div>
+
+    <!-- Show More -->
+    <div class="button-container">
+      <button class="show-more" onclick="showMore()">Show More</button>
+    </div>
+  </div>
+
+  <!-- Modal Preview -->
+  <div id="imageModal" class="modal hidden">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="Preview">
+      <!-- Small Download Button -->
+      <a id="downloadBtn" title="Download Image" download target="_blank">&#8681;</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
